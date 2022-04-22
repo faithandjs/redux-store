@@ -1,0 +1,29 @@
+.home {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    .input-categories {
+        display: flex;
+      .input-box {
+        .image {
+          img {
+          }
+        }
+        input {
+        }
+      }
+      .categories {
+        display: flex;
+        div{
+            padding: 10px;
+        }
+        .image {
+          display: none;
+        }
+      }
+    }
+    .cartImg {
+        border: 10px solid black;
+    }
+  }
+}

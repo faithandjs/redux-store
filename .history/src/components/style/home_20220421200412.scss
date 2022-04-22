@@ -1,0 +1,37 @@
+.home {
+  background-color: aquamarine;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    .input-categories {
+      display: flex;
+      .input-box {
+        display: flex;
+        height: 40px;
+        .image {
+          img {
+              
+          }
+        }
+        input {
+            width: 300px;
+        }
+      }
+      .categories {
+        display: flex;
+        div {
+          padding: 10px;
+          text-transform: uppercase;
+          font-weight: 300;
+          font-size: 18px;
+        }
+        .image {
+          display: none;
+        }
+      }
+    }
+    .cartImg {
+      border: 10px solid black;
+    }
+  }
+}

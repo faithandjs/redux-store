@@ -1,0 +1,1 @@
+import { NEW_POSTS, FETCH_POSTS } from "../actions/types";

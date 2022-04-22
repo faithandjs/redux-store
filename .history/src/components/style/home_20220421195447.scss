@@ -1,0 +1,24 @@
+.home {
+  .nav {
+    display: flex;
+    .input-categories {
+      .input-box {
+        .image {
+          img {
+          }
+        }
+        input {
+        }
+      }
+      .categories {
+        display: flex;
+        .image {
+          display: none;
+        }
+      }
+    }
+    .cartImg {
+        border: 10px solid black;
+    }
+  }
+}
