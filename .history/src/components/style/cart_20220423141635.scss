@@ -1,0 +1,34 @@
+@use "./colors";
+
+.cart {
+  header {
+    .text {
+    }
+    .backBox {
+    }
+  }
+  .cart-box {
+    .image-box {
+      img {
+      }
+    }
+    .content {
+      .upper {
+        .title {
+        }
+        .delete {
+        }
+      }
+      .lower {
+        .counter {
+        }
+        .total {
+        }
+      }
+    }
+  }
+  .footer {
+    button {
+    }
+  }
+}

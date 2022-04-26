@@ -1,0 +1,260 @@
+@import "./colors";
+@import "~pretty-checkbox/src/pretty-checkbox.scss";
+
+.cart {
+  //background-color: $matchColor;
+  color: $text;
+  header {
+    height: 70px;
+    background: $matchColor; //lighten( $matchColor, 10%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .text {
+      color: $white;
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .backBox {
+    }
+    .home {
+    }
+  }
+  .items {
+    display: block;
+    padding: 20px 0;
+    max-width: 900px;
+    margin: auto;
+    .cart-box {
+      padding: 20px 0;
+      display: flex;
+      /*&:hover {
+        background: lighten($bg, 10%);
+        color: $white;
+        .counter {
+          //border: 0 !important;
+        }
+        button {
+          color: $white !important;
+        }
+      }*/
+      .check-box {
+        .mark{
+          width: 25px;
+          height: 25px;
+          border:  1px solid $matchColor;
+          border-radius: 3px;
+        }
+        input[type="checkbox"]{
+          width: 25px;
+          height: 25px;
+          margin: 0;
+          opacity: 0;
+        }
+      }
+      .image-box {
+        padding: 10px;
+        margin: 0 40px 0 10px;
+        background-color: $white;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 60px;
+          object-fit: contain;
+          max-height: 80px;
+        }
+      }
+      .content {
+        width: 100%;
+        .upper,
+        .lower {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          .title {
+            padding: 0 10px 15px 0;
+          }
+          .delete:hover {
+            cursor: pointer;
+          }
+          .delete,
+          .total {
+            padding: 0 20px 15px 0;
+          }
+        }
+        .lower {
+          .total {
+            padding-bottom: 0;
+            color: $matchColor;
+            font-size: 20px;
+            font-weight: bold;
+          }
+          .counter {
+            border: 1px solid lighten($text, 70%);
+            width: 100px;
+            height: 25px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+            padding: 0 5px;
+            padding: 4px;
+            span,
+            button {
+              width: 100%;
+              text-align: center;
+              height: 100%;
+              color: lighten($text, 50%) !important;
+            }
+            button {
+              color: lighten($text, 50%) !important;
+              background-color: unset;
+              font-size: 16px;
+              font-weight: 100;
+              min-width: unset;
+              width: unset;
+
+              &:hover {
+                border-radius: 0;
+                color: $text !important;
+              }
+            }
+            .minus {
+              //padding: 2px;
+              position: relative;
+              bottom: 1.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    text-align: center;
+    button {
+      background-color: $matchColor;
+      padding: 4px;
+      /*
+      &:hover{
+          transform: scale(1.2) ;
+          //box-shadow: ;
+      }*/
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .cart {
+    //background-color: $matchColor;
+    /*  color: $text;
+        .items, .footer{
+            margin: ;
+        }
+       header {
+          height: 70px;
+          background-color: $matchColor;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .text {
+            color: $white;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          .backBox {
+          }
+          .home {
+          }
+        }
+        .items {
+          display: block;
+          padding: 20px 0;
+          .cart-box {
+            padding: 10px 0;
+            display: flex;
+            &:hover {
+              background: lighten($bg, 10%);
+              color: $white;
+              .counter {
+                //border: 0 !important;
+              }
+              button {
+                color: $white !important;
+              }
+            }
+            .image-box {
+              padding: 10px;
+              margin: 0 40px 0 10px;
+              background-color: $white;
+              height: 80px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 60px;
+                object-fit: contain;
+                max-height: 80px;
+              }
+            }
+            .content {
+              width: 100%;
+              .upper,
+              .lower {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                .title {
+                  padding: 0 10px 15px 0;
+                }
+                .delete,
+                .total {
+                  padding: 0 20px 15px 0;
+                }
+              }
+              .lower {
+                .total {
+                  padding-bottom: 0;
+                }
+                .counter {
+                  //border: 1px solid $matchColor;
+                  width: 80px;
+                  height: 25px;
+                  display: flex;
+                  justify-content: space-evenly;
+                  align-items: baseline;
+                  //padding: 4px;
+                  span, button {
+                    width: 100%;
+                    text-align: center;
+                    height: 100%;
+                  }
+                  button {
+                    color: $text;
+                    background-color: unset;
+                    font-size: 16px;
+                    font-weight: 100;
+                    width: 25.72;
+                    &:hover {
+                      background-color: $matchColor;
+                    }
+                  }
+                  .minus {
+                    padding: 2px ;
+                    //position: relative;
+                    //bottom: 1.5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .footer {
+          button {
+            background-color: $matchColor;
+            padding: 4px;
+          }
+        }*/
+  }
+}

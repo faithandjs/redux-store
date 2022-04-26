@@ -1,0 +1,24 @@
+$white: #ffffff;
+$bg: #72796f;
+$matchColor: salmon;//#df9496;
+$text:  darken($bg, 30%);
+
+.home-bg, .cart-bg{
+    background: $white;
+ // background: lighten($matchColor, 24%); //#fbf2f2
+}
+
+.details-bg {
+  background: lighten($bg, 30%);
+}
+.grey{
+background-color: $bg;
+}
+.green{
+background-color: rgb(51, 173, 51);
+}
+
+/*
+ {
+  background: $matchColor;
+}*/

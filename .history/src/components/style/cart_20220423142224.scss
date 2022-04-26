@@ -1,0 +1,43 @@
+@import "./colors";
+
+.cart {
+  header {
+      height: 100px;
+      background-color: $matchColor;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    .text {
+        color: $white;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .backBox {
+    }
+  }
+  .cart-box {
+    .image-box {
+      img {
+      }
+    }
+    .content {
+      .upper {
+        .title {
+        }
+        .delete {
+        }
+      }
+      .lower {
+        .counter {
+        }
+        .total {
+        }
+      }
+    }
+  }
+  .footer {
+    button {
+    }
+  }
+}

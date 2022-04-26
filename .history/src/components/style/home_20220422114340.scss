@@ -1,0 +1,183 @@
+.home {
+  background-color: aquamarine;
+  padding: 10px 10px;
+
+
+  .nav {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    .input-categories {
+      display: flex;
+      .input-box {
+        display: flex;
+        height: 40px;
+        background-color: bisque;
+        border-radius: 5px;
+        .image {
+          padding: 4px;
+          img {
+          }
+        }
+        input {
+          width: 300px;
+          border: 0;
+          outline: 0;
+        }
+      }
+      .categories {
+        display: flex;
+        div {
+          padding: 10px;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 15px;
+          white-space: nowrap;
+        }
+        .image {
+          display: none;
+        }
+      }
+    }
+    .cartImg {
+      border: 10px solid black;
+    }
+  }
+}
+@media screen and (max-width: 1024px){
+    .home {
+        .nav {
+          padding: 0 10px;
+          display: flex;
+          justify-content: space-between;
+          .input-categories {
+            display: flex;
+            .input-box {
+              display: flex;
+              height: 40px;
+              background-color: bisque;
+              border-radius: 5px;
+              .image {
+                img {
+                }
+              }
+              input {
+                width: 300px;
+                border: 0;
+                outline: 0;
+              }
+            }
+            .categories {
+              display: flex;
+              div {
+                padding: 10px;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 15px;
+                white-space: nowrap;
+                display: flex;
+              }
+              .image {
+                display: flex;
+              }
+            }
+          }
+          .cartImg {
+            display: none;
+          }
+        }
+      }
+}/*
+@media screen and (max-width: 756px) {
+    .home {
+        background-color: aquamarine;
+        padding: 10px 10px;
+        .nav {
+          padding: 0 10px;
+          display: flex;
+          justify-content: space-between;
+          .input-categories {
+            display: flex;
+            .input-box {
+              display: flex;
+              height: 40px;
+              background-color: bisque;
+              border-radius: 5px;
+              .image {
+                padding: 4px;
+                img {
+                }
+              }
+              input {
+                width: 300px;
+                border: 0;
+                outline: 0;
+              }
+            }
+            .categories {
+              display: flex;
+              div {
+                padding: 10px;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 15px;
+                white-space: nowrap;
+              }
+              .image {
+                display: none;
+              }
+            }
+          }
+          .cartImg {
+            border: 10px solid black;
+          }
+        }
+      }
+}
+@media screen and (max-width: 414px) {
+    .home {
+        background-color: aquamarine;
+        padding: 10px 10px;
+        .nav {
+          padding: 0 10px;
+          display: flex;
+          justify-content: space-between;
+          .input-categories {
+            display: flex;
+            .input-box {
+              display: flex;
+              height: 40px;
+              background-color: bisque;
+              border-radius: 5px;
+              .image {
+                padding: 4px;
+                img {
+                }
+              }
+              input {
+                width: 300px;
+                border: 0;
+                outline: 0;
+              }
+            }
+            .categories {
+              display: flex;
+              div {
+                padding: 10px;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 15px;
+                white-space: nowrap;
+              }
+              .image {
+                display: none;
+              }
+            }
+          }
+          .cartImg {
+            border: 10px solid black;
+          }
+        }
+      }
+}
+*/

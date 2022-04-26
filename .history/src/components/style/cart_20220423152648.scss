@@ -1,0 +1,81 @@
+@import "./colors";
+
+.cart {
+    color: $text; 
+  header {
+    height: 100px;
+    background-color: $matchColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .text {
+      color: $white;
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .backBox {
+    }
+    .home {
+    }
+  }
+  .items {
+    display: block;
+    padding: 10px 0;
+    //width: 100%;
+    .cart-box {
+      padding: 10px 0;
+      display: flex;
+      //width: 100%;
+      .image-box {
+        max-height: 80px;
+        padding: 10px;
+        margin: 0 40px 0 10px;
+        background-color: $white;
+        img {
+          width: 60px;
+        }
+      }
+      .content {
+        width: 100%;
+        .upper,
+        .lower {
+          display: flex;
+          justify-content: space-between;
+          //width: 100%;
+          .title {
+            padding: 0 10px 15px 0;
+          }
+          .delete,
+          .total {
+            padding: 0 20px 15px 0;
+          }
+        }
+        .lower {
+          .total {
+            padding-bottom: 0;
+          }
+          .counter {
+            border: 1px solid $matchColor;
+            width: 80px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+            //padding: 4px;
+            button {
+                color: $t;
+              //font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+   
+  button {
+    background-color: $matchColor;
+    padding: 4px;
+  }
+  }
+}

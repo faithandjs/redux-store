@@ -1,0 +1,35 @@
+@use "./colors";
+
+.cart {
+  header {
+      height: 100px;
+    .text {
+    }
+    .backBox {
+    }
+  }
+  .cart-box {
+    .image-box {
+      img {
+      }
+    }
+    .content {
+      .upper {
+        .title {
+        }
+        .delete {
+        }
+      }
+      .lower {
+        .counter {
+        }
+        .total {
+        }
+      }
+    }
+  }
+  .footer {
+    button {
+    }
+  }
+}

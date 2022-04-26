@@ -1,0 +1,15 @@
+$white: #ffffff;
+$bg: #72796f;
+$matchColor: #df9496;
+
+.home-bg {
+  background: lighten($matchColor, 24%); //#fbf2f2
+}
+
+.details-bg {
+  background-color: $bg;
+}
+
+.cart-bg {
+  background: $matchColor;
+}

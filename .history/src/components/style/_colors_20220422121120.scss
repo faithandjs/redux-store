@@ -1,0 +1,7 @@
+$white: #ffffff;
+$bg: #72796f;
+$matchColor: #df9496;
+
+.matchBg {
+  background: lighten($matchColor, 24%); //#fbf2f2
+}

@@ -1,0 +1,36 @@
+@import "./colors";
+
+.cart {
+  header {
+      height: 100px;
+      background-color: $matchColor;
+    .text {
+    }
+    .backBox {
+    }
+  }
+  .cart-box {
+    .image-box {
+      img {
+      }
+    }
+    .content {
+      .upper {
+        .title {
+        }
+        .delete {
+        }
+      }
+      .lower {
+        .counter {
+        }
+        .total {
+        }
+      }
+    }
+  }
+  .footer {
+    button {
+    }
+  }
+}

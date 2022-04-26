@@ -1,0 +1,123 @@
+@import "./colors";
+
+.backBox {
+  display: flex;
+  margin: auto 0;
+  padding-left: 12.4px;
+  .back {
+    transform: rotate(180deg);
+    width: 25.6px;
+    height: 25.6px;
+    position: relative;
+  }
+  &:hover {
+    .back {
+      animation: back 1s 1;
+    }
+  }
+}
+.homeIcon {
+  margin: auto 0;
+  img {
+    transform: scale(0.5);
+  }
+  &:hover {
+    img {
+      animation: home 1s 1;
+    }
+  }
+}
+button {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: $white;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  min-width: 140px;
+  height: 42px;
+  background-color: $matchColor;
+
+  &:hover {
+    border-radius: 0;
+    transform: skew(-12deg);
+  }
+}
+@keyframes home {
+  0% {
+    transform: scale(0.4);
+  }
+  25% {
+    transform: scale(0.35);
+  }
+  50% {
+    transform: scale(0.35);
+  }
+  75% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+@keyframes back {
+  0% {
+    left: 0px;
+    transform: rotate(180deg) scale(0.7);
+  }
+  10% {
+    left: -20px;
+    transform: rotate(180deg) scale(0.7);
+  }
+  20% {
+    left: -40px;
+    transform: rotate(180deg) scale(0.6);
+  }
+  30% {
+    left: -60px;
+    transform: rotate(180deg) scale(0.5);
+  }
+  40% {
+    left: -80px;
+    transform: rotate(180deg) scale(0.4);
+  }
+  50% {
+    left: -100px;
+    transform: rotate(180deg) scale(0.4);
+  }
+  60% {
+    left: -40px;
+    transform: rotate(0deg) scale(0.4);
+  }
+  70% {
+    left: -20px;
+    transform: rotate(0deg) scale(0.5);
+  }
+  80% {
+    left: 0px;
+    transform: rotate(0deg) scale(0.6);
+  }
+  90% {
+    transform: rotate(0deg) scale(0.7);
+  }
+  100% {
+    left: 0px;
+  }
+}
+.cartImg {
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 50%;
+    position: relative;
+    top: 0;
+    right: 0;
+    span {
+    }
+  }
+}
