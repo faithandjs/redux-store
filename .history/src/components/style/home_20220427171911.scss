@@ -1,28 +1,24 @@
 @import "./colors";
 .home {
-  color: $text;
+  //
+  color: $text; //#272926
+  //color: $white;
   .nav {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     background-color: $matchColor;
-    box-shadow: 0px 0px 5px 0.18px $bg;
-    h1 {
-      color: $white;
-    }
+
     .cartImg {
+      //border: 10px solid black;
       padding: 7px;
       display: flex;
       align-items: center;
       justify-content: center;
-      div {
-        color: $white;
-        top: -13px !important;
-        right: -45px !important;
-      }
       img {
-        width: 40px;
-        height: 40px;
+        //transform: scale(0.8);
+        width: 44.8px;
+        height: 44.8px;
       }
     }
   }
@@ -36,6 +32,7 @@
       height: 40px;
       background-color: lighten($color: $bg, $amount: 45%);
       border: 0.6px solid lighten($color: $bg, $amount: 45%);
+      // border-radius: 5px;
       input {
         width: 300px;
         border: 0;
@@ -45,14 +42,13 @@
         border-radius: 0px;
       }
       .categories {
-        /* display: flex;
+        display: flex;
         align-items: center;
-        justify-content: center;*/
+        justify-content: center;
         &:hover {
           cursor: pointer;
         }
         .options {
-          z-index: 1;
           background-color: lighten($color: $bg, $amount: 45%);
           display: flex;
           div {
@@ -87,103 +83,79 @@
       background-color: $white;
       position: relative;
       overflow: hidden;
-      border: 1px solid lighten($matchColor1, 10%);
+      border: 1px solid lighten($color: $bg, $amount: 35%);
       border-radius: 2px;
       display: flex;
       align-items: center;
-      justify-content: center;
       .image-box {
+        // height: 200px;
         text-align: center;
         width: -webkit-fill-available;
         padding: 7px 5px;
 
+        &:hover {
+          cursor: pointer;
+        }
         img {
+          // max-width: -webkit-fill-available;
           max-width: 200px;
           max-height: 290px;
+          //height: 100%;
           object-fit: fill;
         }
       }
       .details-box {
         width: -webkit-fill-available;
-        display: grid;
-        //background: $matchColor;
+        display: none;
+        background: $matchColor;
         padding: 20px 15px;
         color: $white;
         position: absolute;
         bottom: 0;
-        height: -webkit-fill-available;
-        background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0),
-          rgba(0, 0, 0, 0.3),
-          rgba(0, 0, 0, 0.43),
-          rgba(0, 0, 0, 0.63)
-        );
-        font-weight: bold;
-        //     display: grid;
-        align-items: end;
-        grid-template:
-          "."
-          "."
-          "."
-          "."
-          "."
-          "."
-          "."
-          "."
-          "."
-          "title"
-          "price-star";
         .title {
-          grid-area: title;
-          font-size: 15px;
-          text-align: center;
         }
         .price-star {
-          display: none;
-          //display: flex;
+          display: flex;
           justify-content: space-between;
           margin-top: 20px;
-          grid-area: price-star;
-          margin-top: 0;
-          .empty-icons,
-          .filled-icons {
-            svg {
-              width: 23px !important;
-              height: 23px !important ;
-            }
-          }
         }
       }
       &:hover {
-        cursor: pointer;
-
+        .image-box {
+          //  border-top: 1px solid rgba(255, 255, 255, 0.2);
+          // background-color: rgba(221, 18, 18, 0.479);
+        }
         .details-box {
-          cursor: pointer;
-          display: grid;
+          height: -webkit-fill-available;
           background: linear-gradient(
             180deg,
             rgba(0, 0, 0, 0),
             rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.53),
-            rgba(0, 0, 0, 0.53),
-            rgba(0, 0, 0, 0.63)
+            rgba(194, 78, 178, 0.5)
           );
+          color: rgb(126, 125, 125);
+          font-weight: bold;
+          display: grid;
+          align-items: end;
+          grid-template:
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            "title"
+            "price-star";
           .title {
-            text-align: start;
+            grid-area: title;
+            font-size: 16px;
           }
           .price-star {
-            display: flex;
+            grid-area: price-star;
+            margin-top: 0;
           }
         }
       }
@@ -195,6 +167,7 @@
   .home {
     .nav {
       .cartImg {
+        //display: none;
       }
     }
     .input-categories {
@@ -399,14 +372,56 @@
 @media screen and (max-width: 622px) {
   .home {
     .input-categories {
+      .categories {
+        div {
+          display: none;
+        }
+        //&:hover, &:active
+        &.modal {
+          display: block;
+          width: 100%;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.329);
+          .options {
+            //width: 100%;
+            z-index: 1;
+            min-width: 50%;
+            min-height: 250px;
+            display: grid;
+            div {
+              text-align: center;
+              font-weight: bold;
+
+              &:hover {
+                background-color: lighten($color: $bg, $amount: 5%);
+                color: $white;
+              }
+            }
+          }
+          .image {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 622px) {
+  .home {
+    .input-categories {
       .input-box {
         input {
-          max-width: 220px;
+          width: unset;
         }
       }
       .categories {
         div {
-          //display: none;
         }
       }
     }
@@ -459,81 +474,3 @@
             }*
           }
         }*/
-@media screen and (max-width: 770px) {
-  .home {
-    .input-categories {
-      .categories {
-        &:hover {
-        //  display: none;
-          .options {
-            display: none;
-            position: fixed;
-            div {
-              display: none;
-            }
-          }
-        }
-        &.modal {
-          z-index: 1;
-          display: block;
-          width: 100%;
-          height: 100vh;
-          position: fixed;
-          top: 0;
-          left: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: rgba(0, 0, 0, 0.329);
-
-          .options {
-            display: block;
-            position: fixed;
-            min-width: 50%;
-            min-height: 250px;
-            display: grid;
-            div {
-              display: block;
-              text-align: center;
-              font-weight: bold;
-
-              &:hover {
-                background-color: lighten($color: $bg, $amount: 5%);
-                color: $white;
-              }
-            }
-          }
-          .image {
-            display: block !important;
-          }
-        }
-      }
-    }
-    .page-content {
-      .item-box {
-        .details-box {
-          display: grid;
-          background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.53),
-            rgba(0, 0, 0, 0.53),
-            rgba(0, 0, 0, 0.63)
-          );
-          .title {
-            text-align: start;
-          }
-          .price-star {
-            display: flex;
-          }
-        }
-      }
-    }
-  }
-}

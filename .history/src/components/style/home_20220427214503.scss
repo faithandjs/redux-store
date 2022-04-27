@@ -45,9 +45,9 @@
         border-radius: 0px;
       }
       .categories {
-        /* display: flex;
+        display: flex;
         align-items: center;
-        justify-content: center;*/
+        justify-content: center;
         &:hover {
           cursor: pointer;
         }
@@ -398,6 +398,10 @@
 */
 @media screen and (max-width: 622px) {
   .home {
+  }
+}
+@media screen and (max-width: 622px) {
+  .home {
     .input-categories {
       .input-box {
         input {
@@ -463,16 +467,6 @@
   .home {
     .input-categories {
       .categories {
-        &:hover {
-        //  display: none;
-          .options {
-            display: none;
-            position: fixed;
-            div {
-              display: none;
-            }
-          }
-        }
         &.modal {
           z-index: 1;
           display: block;
@@ -485,15 +479,11 @@
           justify-content: center;
           align-items: center;
           background-color: rgba(0, 0, 0, 0.329);
-
           .options {
-            display: block;
-            position: fixed;
             min-width: 50%;
             min-height: 250px;
             display: grid;
             div {
-              display: block;
               text-align: center;
               font-weight: bold;
 
@@ -504,7 +494,7 @@
             }
           }
           .image {
-            display: block !important;
+            display: none !important;
           }
         }
       }

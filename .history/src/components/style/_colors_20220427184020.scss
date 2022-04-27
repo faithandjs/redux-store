@@ -4,18 +4,18 @@ $matchColor: #008080; //salmon;//#df9496;
 $matchColor1: #b2d8d8;
 $text: darken($bg, 30%);
 
- //{
+.home-bg {
  // background-color: $matchColor1;
- // background: lighten($matchColor1, 15%);
+  background: lighten($matchColor1, 15%);
   // background: $white;
   // background: lighten($matchColor, 24%); //#fbf2f2
-//}
+}
 
 .details-bg {
-  background: lighten($matchColor, 5%);
+  background: lighten($matchColor, 10%);
   //  background-color: $matchColor1;
 }
-.cart-bg, .home-bg{
+.cart-bg{
   background-color: $white;
 }
 .grey {

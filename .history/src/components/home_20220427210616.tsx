@@ -47,7 +47,7 @@ function Home() {
           <div className="title">{item.title}</div>
           <div className="price-star">
             <div className="price">${item.price}</div>
-            <div className="rating">{item.rating.rate} <Rating ratingValue={100} iconsCount={1} readonly /></div>
+            <div className="price">{item.rating.rate} <Rating ratingValue={20} iconsCount={1} readonly /></div>
           </div>
           {/*<div className="button-box">
             <button

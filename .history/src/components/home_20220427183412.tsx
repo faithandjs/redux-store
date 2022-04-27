@@ -15,8 +15,6 @@ import searchImg from "./images/search.png";
 import filter from "./images/filter.png";
 import "./style/extras.scss";
 import { setState } from "../features/cartItemSlice";
-import { Rating } from "react-simple-star-rating";
-
 function Home() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -34,6 +32,16 @@ function Home() {
   const value = useRef("all");
   const error = useRef(0);
 
+  const check = (i: objectType) => {
+    console.log("in check");
+    if (cartState.cartItems.items.some((item) => item.id === i.id)) {
+      dispatch(setState(msg.ALREADYIN));
+      // console.log("already in");
+    } else {
+      dispatch(setState(msg.ADDED));
+      // console.log("added");
+    }
+  };
 
   let pageContent;
   const box = (item: objectType) => {
@@ -43,11 +51,11 @@ function Home() {
         <div  className="image-box">
           <img src={item.image} />
         </div>
-        <div className="details-box" onClick={() => dispatch(setItems(item))}>
+        <div className="details-box">
           <div className="title">{item.title}</div>
           <div className="price-star">
             <div className="price">${item.price}</div>
-            <div className="rating">{item.rating.rate} <Rating ratingValue={100} iconsCount={1} readonly /></div>
+            <div className="price">{item.rating.rate}</div>
           </div>
           {/*<div className="button-box">
             <button

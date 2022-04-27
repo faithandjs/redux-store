@@ -464,7 +464,7 @@
     .input-categories {
       .categories {
         &:hover {
-        //  display: none;
+          display: none;
           .options {
             display: none;
             position: fixed;
@@ -504,7 +504,7 @@
             }
           }
           .image {
-            display: block !important;
+            display: none !important;
           }
         }
       }
