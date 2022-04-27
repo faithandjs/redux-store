@@ -43,13 +43,13 @@
       }
       .categories {
         display: flex;
+        //padding: 7px;
         align-items: center;
         justify-content: center;
         &:hover {
           cursor: pointer;
         }
         .options {
-          background-color: lighten($color: $bg, $amount: 45%);
           display: flex;
           div {
             padding: 10px;
@@ -169,10 +169,15 @@
           display: block;
           .options {
             display: block;
+            background-color: lighten($color: $bg, $amount: 45%);
             position: fixed;
+            // margin: 5px 10px;
             div {
               display: block;
             }
+          }
+          .image {
+            display: flex;
           }
         }
       }

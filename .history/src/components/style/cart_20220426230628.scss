@@ -46,8 +46,8 @@
           .mark {
             width: 100%; //25px;
             height: 100%; // 25px;
-            border: 0.5px solid  lighten($text, 70%);
-            border-radius: 50%;
+            border: 0.5px solid $matchColor;
+            border-radius: 3px;
             transition: 0.6s ease;
           }
           input[type="checkbox"] {
@@ -63,7 +63,6 @@
             }
             &:checked ~ .mark {
               background-color: $matchColor;
-              border: 0.5px solid $matchColor;
             }
           }
         }
@@ -168,21 +167,20 @@
     .items {
       .cart-box {
         align-items: unset;
-        padding: 20px 10px;
+        padding: inherit 10px;
         .check-box {
-          margin:10px 0 0 3px;
+          margin: 50px 0 0 3px;
         }
         .item-dets {
           .image-box {
             margin: 0;
             img {
-              width: 50px;
+              width: 60px;
               object-fit: contain;
-              max-height: 60px;
+              max-height: 80px;
             }
           }
           .content {
-            margin-left: 5px;
             .upper,
             .lower {
               margin-bottom: 5px;

@@ -14,7 +14,7 @@
   &:hover {
     .back {
       transform: rotate(180deg) scale(1.1);
-      // transition:  ;
+     // transition:  ;
       //animation: back 0.7s 1;
     }
   }
@@ -27,7 +27,7 @@
   &:hover {
     img {
       transform: scale(0.55);
-      // animation: home 1s 1;
+     // animation: home 1s 1;
     }
   }
 }
@@ -69,10 +69,10 @@ button {
   }
 }
 @keyframes back {
-  from {
+ from {
     left: 0px;
     //  transform: rotate(180deg) scale(0.7);
-  } /*
+  }/*
   10% {
     left: -20px;
     //  transform: rotate(180deg) scale(0.7);
@@ -108,7 +108,7 @@ button {
   90% {
     //  transform: rotate(0deg) scale(0.7);
   }*/
-  to {
+  to{
     left: -18px;
   }
 }
@@ -187,13 +187,4 @@ button {
   100% {
     transform:  scale(0);
   }*/
-}
-@supports (-webkit-touch-callout: none) {
-  .home {
-    .input-categories {
-      .input-box {
-        border-left-width: 1px;
-      }
-    }
-  }
 }
