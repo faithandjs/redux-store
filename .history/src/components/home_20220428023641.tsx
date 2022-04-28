@@ -228,7 +228,7 @@ function Home() {
         <div className="home">
           <Message />
           <div className="nav">
-            <h1>Buybuy</h1>
+            <h1>Buy*buy</h1>
 
             <CartImg path="/" />
           </div>

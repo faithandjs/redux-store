@@ -1,13 +1,12 @@
 @import "./colors";
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Great+Vibes&family=Libre+Bodoni:ital@1&display=swap");
-
 .app {
   //font-size: 20px;
   position: fixed;
   overflow: auto;
   width: 100%;
   height: 100%;
- // font-family: "Cormorant", serif;
+ // font-family: 'Libre Bodoni', serif;
+ font-family: 'Zilla Slab', serif;
 }
 
 .details {
@@ -68,7 +67,8 @@
           font-size: 16px;
           font-style: italic;
           padding-bottom: 30px;
-          font-family: "Libre Bodoni", serif;
+        font-family: 'Playfair Display', serif;
+         // font-family: 'Libre Bodoni', serif;
         }
         .price-rating {
           display: flex;

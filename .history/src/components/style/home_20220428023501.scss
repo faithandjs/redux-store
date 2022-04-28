@@ -1,5 +1,5 @@
 @import "./colors";
-//@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Bodoni:ital@1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Bodoni:ital@1&display=swap');
 
 .svg {
   position: fixed;
@@ -80,7 +80,6 @@ font-family: 'Vollkorn', serif;
     box-shadow: 0px 0px 5px 0.18px $bg;
     h1 {
       color: $white;
-      font-family: "Great Vibes", cursive;
     }
     .cartImg {
       padding: 7px;
@@ -135,9 +134,7 @@ font-family: 'Vollkorn', serif;
             font-size: 15px;
             white-space: nowrap;
 
-            &:hover,
-            &:active,
-            &:visited {
+            &:hover , &:active, &:visited{
               background-color: lighten($color: $bg, $amount: 5%);
               color: $white;
             }
@@ -149,12 +146,12 @@ font-family: 'Vollkorn', serif;
       }
     }
   }
-  .category {
+  .category{
     text-transform: uppercase;
     padding: 10px 20px;
     text-align: center;
     font-weight: bold;
-    color: $text;
+    color:  $text;
   }
   .page-content {
     padding: 10px 10px;
@@ -162,7 +159,7 @@ font-family: 'Vollkorn', serif;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-around;
-
+ 
     .item-box {
       width: 250px;
       height: 300px;
