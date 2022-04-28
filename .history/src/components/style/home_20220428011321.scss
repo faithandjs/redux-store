@@ -117,6 +117,8 @@
           cursor: pointer;
         }
         .options {
+          position: absolute;
+          left: -30px;
           z-index: 1;
           background-color: lighten($color: $bg, $amount: 45%);
           display: flex;
@@ -127,7 +129,7 @@
             font-size: 15px;
             white-space: nowrap;
 
-            &:hover , &:active, &:visited{
+            &:hover {
               background-color: lighten($color: $bg, $amount: 5%);
               color: $white;
             }
@@ -139,20 +141,12 @@
       }
     }
   }
-  .category{
-    text-transform: uppercase;
-    padding: 10px 20px;
-    text-align: center;
-    font-weight: bold;
-    color:  $text;
-  }
   .page-content {
     padding: 10px 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-around;
- 
     .item-box {
       width: 250px;
       height: 300px;
@@ -294,8 +288,6 @@
         &:hover {
           display: block;
           .options {
-            position: absolute;
-            left: -30px;
             display: block;
             //position: fixed;
             div {
@@ -505,23 +497,23 @@
         .details-box {
           padding: 20px 10px 10px;
           grid-template:
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "title"
-            "price-star";
+          "."
+          "."
+          "."
+          "."
+          "."
+          "."
+          "."
+          "."
+          "."
+          "."
+          "."
+          "."
+          "."
+          "."
+          "."
+          "title"
+          "price-star";
           .title,
           .price-star {
             font-size: 13px;
@@ -584,7 +576,6 @@
         &:hover {
           //  display: none;
           .options {
-            left: unset;
             display: none;
             position: fixed;
             div {

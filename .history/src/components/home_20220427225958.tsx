@@ -31,7 +31,7 @@ function Home() {
   const passed = useRef(false);
   const passed2 = useRef(false);
   const passed3 = useRef(false);
-  const value = useRef<string>("all");
+  const value = useRef("all");
   const error = useRef(0);
 
   let pageContent;
@@ -124,7 +124,7 @@ function Home() {
         });
       } else if (current.length === 0 && passed2.current) {
         pageContent = (
-          <div className="not-found">
+          <div>
             "{inputvalue}" not found in "{value.current}"
           </div>
         );
@@ -263,7 +263,7 @@ function Home() {
                     onClick={() => {
                       value.current = "women's clothing";
                       categorySelected();
-                     // addModal();
+                      addModal();
                     }}
                   >
                     women's clothing
@@ -272,7 +272,7 @@ function Home() {
                     onClick={() => {
                       value.current = "men's clothing";
                       categorySelected();
-                      //addModal();
+                      addModal();
                     }}
                   >
                     men's clothing
@@ -281,7 +281,7 @@ function Home() {
                     onClick={() => {
                       value.current = "jewelery";
                       categorySelected();
-                     // addModal();
+                      addModal();
                     }}
                   >
                     jewelery
@@ -290,7 +290,7 @@ function Home() {
                     onClick={() => {
                       value.current = "electronics";
                       categorySelected();
-                      //addModal();
+                      addModal();
                     }}
                   >
                     electronics
@@ -299,7 +299,6 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="category">{value.current}</div>
           <div className="page-content">{pageContent}</div>
         </div>
       )}

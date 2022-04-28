@@ -139,20 +139,12 @@
       }
     }
   }
-  .category{
-    text-transform: uppercase;
-    padding: 10px 20px;
-    text-align: center;
-    font-weight: bold;
-    color:  $text;
-  }
   .page-content {
     padding: 10px 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-around;
- 
     .item-box {
       width: 250px;
       height: 300px;

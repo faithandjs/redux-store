@@ -31,7 +31,7 @@ function Home() {
   const passed = useRef(false);
   const passed2 = useRef(false);
   const passed3 = useRef(false);
-  const value = useRef<string>("all");
+  const value = useRef("all");
   const error = useRef(0);
 
   let pageContent;
@@ -299,7 +299,6 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="category">{value.current}</div>
           <div className="page-content">{pageContent}</div>
         </div>
       )}

@@ -31,11 +31,10 @@ function Home() {
   const passed = useRef(false);
   const passed2 = useRef(false);
   const passed3 = useRef(false);
-  const value = useRef<string>("all");
+  const value = useRef("all");
   const error = useRef(0);
 
   let pageContent;
-  let reload;
   const box = (item: objectType) => {
     //
     return (
@@ -124,7 +123,7 @@ function Home() {
         });
       } else if (current.length === 0 && passed2.current) {
         pageContent = (
-          <div className="not-found">
+          <div>
             "{inputvalue}" not found in "{value.current}"
           </div>
         );
@@ -132,15 +131,13 @@ function Home() {
 
       break;
     case 4:
-      if (error.current < 20) {
+      if (error.current < 50) {
         dispatch(storeItems());
         error.current++;
-        reload = <div className="reloading">Reloading... </div>;
-        console.log(error.current, reload);
+        console.log(error.current);
       } else {
         console.log(error.current, "error");
-
-        reload = <div className="reloading">Reloading... </div>;
+        pageContent = <div>error occured</div>;
       }
   }
   const categorySelected = () => {
@@ -200,29 +197,24 @@ function Home() {
   return (
     <div className="before">
       {data.data.status !== 3 && (
-        <div className="svg">
-          <div >
-            <svg
-              id="svg-spinner"
-              xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              viewBox="0 0 48 48"
-            >
-              <circle cx="24" cy="4" r="4" fill="#fff" />
-              <circle cx="12.19" cy="7.86" r="3.7" fill="#fff" />
-              <circle cx="5.02" cy="17.68" r="3.4" fill="#fff" />
-              <circle cx="5.02" cy="30.32" r="3.1" fill="#fff" />
-              <circle cx="12.19" cy="40.14" r="2.8" fill="#fff" />
-              <circle cx="24" cy="44" r="2.5" fill="#fff" />
-              <circle cx="35.81" cy="40.14" r="2.2" fill="#fff" />
-              <circle cx="42.98" cy="30.32" r="1.9" fill="#fff" />
-              <circle cx="42.98" cy="17.68" r="1.6" fill="#fff" />
-              <circle cx="35.81" cy="7.86" r="1.3" fill="#fff" />
-            </svg>
-            {reload}
-          </div>
-        </div>
+        <svg
+          id="svg-spinner"
+          xmlns="http://www.w3.org/2000/svg"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+        >
+          <circle cx="24" cy="4" r="4" fill="#fff" />
+          <circle cx="12.19" cy="7.86" r="3.7" fill="#fffbf2" />
+          <circle cx="5.02" cy="17.68" r="3.4" fill="#fef7e4" />
+          <circle cx="5.02" cy="30.32" r="3.1" fill="#fef3d7" />
+          <circle cx="12.19" cy="40.14" r="2.8" fill="#feefc9" />
+          <circle cx="24" cy="44" r="2.5" fill="#feebbc" />
+          <circle cx="35.81" cy="40.14" r="2.2" fill="#fde7af" />
+          <circle cx="42.98" cy="30.32" r="1.9" fill="#fde3a1" />
+          <circle cx="42.98" cy="17.68" r="1.6" fill="#fddf94" />
+          <circle cx="35.81" cy="7.86" r="1.3" fill="#fcdb86" />
+        </svg>
       )}
       {data.data.status === 3 && (
         <div className="home">
@@ -263,7 +255,7 @@ function Home() {
                     onClick={() => {
                       value.current = "women's clothing";
                       categorySelected();
-                     // addModal();
+                      addModal();
                     }}
                   >
                     women's clothing
@@ -272,7 +264,7 @@ function Home() {
                     onClick={() => {
                       value.current = "men's clothing";
                       categorySelected();
-                      //addModal();
+                      addModal();
                     }}
                   >
                     men's clothing
@@ -281,7 +273,7 @@ function Home() {
                     onClick={() => {
                       value.current = "jewelery";
                       categorySelected();
-                     // addModal();
+                      addModal();
                     }}
                   >
                     jewelery
@@ -290,7 +282,7 @@ function Home() {
                     onClick={() => {
                       value.current = "electronics";
                       categorySelected();
-                      //addModal();
+                      addModal();
                     }}
                   >
                     electronics
@@ -299,7 +291,6 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="category">{value.current}</div>
           <div className="page-content">{pageContent}</div>
         </div>
       )}
