@@ -21,7 +21,6 @@ function Home() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const data: dataState = useSelector(storeData);
-  //  const cartState: objArr = useSelector(cart);
   const [currentCategory, setCurrentCategory] = useState<objectType[]>(
     data.data.items
   );
@@ -39,11 +38,7 @@ function Home() {
   const box = (item: objectType) => {
     //
     return (
-      <div
-        key={item.id}
-        className="item-box"
-        onClick={() => dispatch(setItems(item))}
-      >
+      <div className="item-box" onClick={() => dispatch(setItems(item))}>
         <div className="image-box">
           <img src={item.image} />
         </div>
@@ -56,26 +51,6 @@ function Home() {
               <Rating ratingValue={100} iconsCount={1} readonly />
             </div>
           </div>
-          {/*<div className="button-box">
-            <button
-              onClick={() => {
-                setTimeout(() => {
-                  setDisplay();
-                }, 500);
-                if (
-                  !cartState.cartItems.items.some(
-                    (itemX) => itemX.id === item.id
-                  )
-                ) {
-                  dispatch(newItem(item));
-                }
-                dispatch(calculateTotal());
-                check(item);
-              }}
-            >
-              <span>add to cart</span>
-            </button>
-          </div>*/}
         </div>
       </div>
     );
@@ -104,23 +79,19 @@ function Home() {
     default:
       pageContent = <div>default</div>;
       break;
-    /*  case 1:
-    case 2:
-      pageContent = <div>loading</div>;
-      break;*/
     case 3:
       if (
         (current.length !== 0 && !passed2.current) ||
         (current.length !== 0 && passed2.current)
       ) {
         passed2.current = true;
-        pageContent = current.map((item: any) => {
-          return <>{box(item)}</>;
+        pageContent = current.map((item: any, index) => {
+          return <div key={index}>{box(item)}</div>;
         });
       } else if (current.length === 0 && !passed2.current) {
         passed2.current = true;
-        pageContent = data.data.items.map((item: objectType) => {
-          return <>{box(item)}</>;
+        pageContent = data.data.items.map((item: objectType, index) => {
+          return <div key={index}>{box(item)}</div>;
         });
       } else if (current.length === 0 && passed2.current) {
         pageContent = (
@@ -201,7 +172,7 @@ function Home() {
     <div className="before">
       {data.data.status !== 3 && (
         <div className="svg">
-          <div >
+          <div>
             <svg
               id="svg-spinner"
               xmlns="http://www.w3.org/2000/svg"
@@ -263,7 +234,7 @@ function Home() {
                     onClick={() => {
                       value.current = "women's clothing";
                       categorySelected();
-                     // addModal();
+                      // addModal();
                     }}
                   >
                     women's clothing
@@ -281,7 +252,7 @@ function Home() {
                     onClick={() => {
                       value.current = "jewelery";
                       categorySelected();
-                     // addModal();
+                      // addModal();
                     }}
                   >
                     jewelery

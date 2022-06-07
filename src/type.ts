@@ -47,8 +47,8 @@ export interface msgProp {
   itemE: objectType;
 }
 export interface numberProp {
-  n: number;
-  amnt?: number;
+  prop: number;
+  donde: 'details' | 'cart'
 }
 export interface textProp {
 styles: string;

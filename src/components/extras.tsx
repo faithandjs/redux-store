@@ -51,38 +51,52 @@ export const CartImg: React.FC<cartProp> = ({ path }) => {
     </div>
   );
 };
-/*
-export const Counter: React.FC<numberProp> = ({ n, amnt }) => {
+
+export const Counter: React.FC<numberProp> = ({ prop, donde }) => {
+  const index = prop;
   const dispatch = useDispatch();
-  const cartState: objArr = useSelector(cart);
-  console.log(cartState.cartItems.items[n].total)
+  const cartData: objArr = useSelector(cart);
+  const data: dataState = useSelector(storeData);
   return (
-    <div className="counter">
-      <button
-        className="minus"
-        onClick={() => {
-          dispatch(subtract({ n, amnt }));
-          dispatch(calculateTotal());
-        }}
-      >
-        -
-      </button>
-      <span>
-        {cartState.cartItems.items[n].count
-          ? cartState.cartItems.items[n].count
-          : null}
-      </span>
-      <button
-        onClick={() => {
-          dispatch(add({ n, amnt }));
-          dispatch(calculateTotal());
-        }}
-      >
-        +
-      </button>
-    </div>
+    <>
+      <div className="counter">
+        <button
+          className="minus"
+          onClick={() => {
+            dispatch(subtract(index));
+            dispatch(calculateTotal());
+            //  checkout();
+          }}
+        >
+          -
+        </button>
+        <span>
+          {donde === "cart"
+            ? cartData.cartItems.items[index].count
+              ? cartData.cartItems.items[index].count
+              : null
+            : null}
+          {donde === "details"
+            ? data.expandedItem.item.count
+              ? data.expandedItem.item.count
+              : null
+            : null}
+        </span>
+        <button
+          onClick={() => {
+            dispatch(add(index));
+            dispatch(calculateTotal());
+            //    checkout();
+          }}
+        >
+          +
+        </button>
+      </div>
+    </>
   );
-};*/ //{cartState.items.items[n].count ? cartState.items.items[n].count  : null}
+};
+
+//{cartState.items.items[n].count ? cartState.items.items[n].count  : null}
 export const Back = () => {
   const navigate = useNavigate();
   return (

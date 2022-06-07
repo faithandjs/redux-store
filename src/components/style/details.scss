@@ -7,7 +7,7 @@
   overflow: auto;
   width: 100%;
   height: 100%;
- // font-family: "Cormorant", serif;
+  // font-family: "Cormorant", serif;
 }
 
 .details {
@@ -79,6 +79,13 @@
           }
           .rating {
             .rate {
+              .empty-icons,
+              .filled-icons {
+                svg {
+                  width: 35px !important;
+                  height: 35px !important ;
+                }
+              }
             }
             .count {
               width: 100%;
@@ -91,12 +98,35 @@
             }
           }
         }
-        .button-box {
+        .to-cart {
           padding-top: 50px;
           display: flex;
-          justify-content: flex-end;
-          button {
-            color: $white;
+          justify-content: space-between;
+          align-items: center;
+          .counter {
+            border: 1px solid lighten($text, 70%);
+            border-radius: 4px;
+            width: 80px;
+            span,
+            button {
+              color: #fff !important;
+            }
+            button {
+              color: #fff !important;
+              background-color: unset;
+
+              &:hover {
+                color: $text !important;
+                transform: scale(1.2);
+              }
+            }
+          }
+          .button-box {
+            button {
+             // height: 35px;
+              border-radius: 4px;
+              color: $white;
+            }
           }
         }
       }
@@ -124,16 +154,16 @@ button {
           border-top-left-radius: 0px;
           border-bottom-left-radius: 0px;
           justify-content: center;
-          img {
-          }
+          
         }
         .content {
           border-top-right-radius: 0px;
           border-bottom-right-radius: 0px;
           border: 0;
           background-color: unset;
-          .button-box {
-            padding-top: 20px;
+          .to-cart {
+              padding-top: 50px;
+            
           }
         }
       }
@@ -165,14 +195,12 @@ button {
                 .empty-icons,
                 .filled-icons {
                   svg {
-                    width: 30px !important;
-                    height: 30px !important ;
+                    width: 25px !important;
+                    height: 25px !important ;
                   }
                 }
               }
-              .count {
-                //  justify-content: start;
-              }
+              
             }
           }
         }

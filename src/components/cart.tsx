@@ -10,7 +10,7 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { objArr, objectType } from "../type";
 import "./style/cart.scss";
-import { Back, HomeIcon } from "./extras";
+import { Back, Counter, HomeIcon } from "./extras";
 import { bgRotation } from "./extras";
 
 function Cart() {
@@ -24,7 +24,7 @@ function Cart() {
   });
   useEffect(() => {
     checkout();
-  }, [ selected, cartData.cartItems.grandTotal,]);
+  }, [selected, cartData.cartItems.grandTotal]);
   useEffect(() => {
     onDelete();
   }, [cartData.cartItems.items.length]);

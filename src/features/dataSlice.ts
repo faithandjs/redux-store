@@ -42,6 +42,24 @@ export const dataSlice = createSlice({
     restExpandedStatus: (state) => {
       state.expandedItem.status = status.postSuccess;
     },
+    ADD: (state, action) => {
+      state.expandedItem.item.count++;
+      state.data.items[action.payload].count++;
+      state.data.items[action.payload].total =
+        state.data.items[action.payload].count *
+        state.data.items[action.payload].price;
+      state.expandedItem.item.total = state.data.items[action.payload].total;
+    },
+    SUBTRACT: (state, action) => {
+      if (state.expandedItem.item.count !== 1) {
+        state.expandedItem.item.count--;
+        state.data.items[action.payload].count--;
+        state.data.items[action.payload].total =
+          state.data.items[action.payload].count *
+          state.data.items[action.payload].price;
+        state.expandedItem.item.total = state.data.items[action.payload].total;
+      }
+    },
   },
   extraReducers(builder) {
     builder
@@ -52,7 +70,7 @@ export const dataSlice = createSlice({
         state.data.status = status.succeeded;
         const loaded = action.payload.map((item: objectType) => {
           item.count = 1;
-          item.total = item.price
+          item.total = item.price;
           return item;
         });
         state.data.items = state.data.items.concat(loaded);
@@ -63,6 +81,6 @@ export const dataSlice = createSlice({
   },
 });
 export const storeData = (state: any) => state.data;
-export const { setItems, restExpandedStatus,  } =
+export const { setItems, restExpandedStatus, ADD, SUBTRACT } =
   dataSlice.actions;
 export default dataSlice.reducer;

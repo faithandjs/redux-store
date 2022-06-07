@@ -113,41 +113,6 @@
               font-size: 20px;
               font-weight: bold;
             }
-            .counter {
-              border: 1px solid lighten($text, 70%);
-              width: 100px;
-              height: 25px;
-              display: flex;
-              justify-content: space-evenly;
-              align-items: baseline;
-              padding: 0 5px;
-              padding: 4px;
-              span,
-              button {
-                width: 100%;
-                text-align: center;
-                height: 100%;
-                color: lighten($text, 50%) !important;
-              }
-              button {
-                color: lighten($text, 50%) !important;
-                background-color: unset;
-                font-size: 16px;
-                font-weight: 100;
-                min-width: unset;
-                width: unset;
-
-                &:hover {
-                  border-radius: 0;
-                  color: $text !important;
-                }
-              }
-              .minus {
-                //padding: 2px;
-                position: relative;
-                bottom: 1.5px;
-              }
-            }
           }
         }
       }
@@ -164,6 +129,41 @@
           //box-shadow: ;
       }*/
     }
+  }
+}
+.counter {
+  border: 1px solid lighten($text, 70%);
+  width: 100px;
+  height: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding: 0 5px;
+  padding: 4px;
+  span,
+  button {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    color: lighten($text, 50%) !important;
+  }
+  button {
+    color: lighten($text, 50%) !important;
+    background-color: unset;
+    font-size: 16px;
+    font-weight: 100;
+    min-width: unset;
+    width: unset;
+
+    &:hover {
+      border-radius: 0;
+      color: $text !important;
+    }
+  }
+  .minus {
+    //padding: 2px;
+    position: relative;
+    bottom: 1.5px;
   }
 }
 @media screen and (max-width: 414px) {
@@ -198,16 +198,6 @@
               }
             }
             .lower {
-              .counter {
-                margin-bottom: 5px;
-                width: 70px;
-                height: 20px;
-
-                .minus {
-                  position: relative;
-                  bottom: 1.5px;
-                }
-              }
             }
           }
         }
@@ -224,6 +214,16 @@
           //box-shadow: ;
       }*/
       }
+    }
+  }
+  .counter {
+    margin-bottom: 5px;
+    width: 70px;
+    height: 20px;
+
+    .minus {
+      position: relative;
+      bottom: 1.5px;
     }
   }
 }
