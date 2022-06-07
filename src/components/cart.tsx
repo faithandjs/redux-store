@@ -125,7 +125,7 @@ function Cart() {
                             //  checkout();
                           }}
                         >
-                          -
+                           &lt;
                         </button>
                         <span>
                           {cartData.cartItems.items[index].count
@@ -139,7 +139,7 @@ function Cart() {
                             //    checkout();
                           }}
                         >
-                          +
+                           &gt;
                         </button>
                       </div>
                       <div className="total">

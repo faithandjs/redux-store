@@ -126,7 +126,7 @@
               button {
                 color: lighten($text, 50%) !important;
                 background-color: unset;
-                font-size: 16px;
+                font-size: 13px;
                 font-weight: 100;
                 min-width: unset;
                 width: unset;
@@ -138,8 +138,8 @@
               }
               .minus {
                 //padding: 2px;
-                position: relative;
-                bottom: 1.5px;
+                /*position: relative;
+                bottom: 1.5px;*/
               }
             }
             .total {
@@ -204,9 +204,9 @@
                 width: 70px;
                 height: 20px;
 
-                .minus {
+                .minus {/*
                   position: relative;
-                  bottom: 1.5px;
+                  bottom: 1.5px;*/
                 }
               }
             }

@@ -72,6 +72,7 @@ function Details() {
                     onClick={() => {
                       dispatch(SUBTRACT(index));
                       dispatch(calculateTotal());
+                      
                     }}
                   >
                     &lt;
