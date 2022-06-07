@@ -38,7 +38,7 @@ function Home() {
   const box = (item: objectType) => {
     //
     return (
-      <div className="item-box" onClick={() => dispatch(setItems(item))}>
+      <>
         <div className="image-box">
           <img src={item.image} />
         </div>
@@ -47,12 +47,12 @@ function Home() {
           <div className="price-star">
             <div className="price">${item.price}</div>
             <div className="rating">
-              {item.rating.rate}{" "}
+              <span> {item.rating.rate}</span>
               <Rating ratingValue={100} iconsCount={1} readonly />
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   };
   useEffect(() => {
@@ -86,12 +86,28 @@ function Home() {
       ) {
         passed2.current = true;
         pageContent = current.map((item: any, index) => {
-          return <div key={index}>{box(item)}</div>;
+          return (
+            <div
+              key={index}
+              className="item-box"
+              onClick={() => dispatch(setItems(item))}
+            >
+              {box(item)}
+            </div>
+          );
         });
       } else if (current.length === 0 && !passed2.current) {
         passed2.current = true;
         pageContent = data.data.items.map((item: objectType, index) => {
-          return <div key={index}>{box(item)}</div>;
+          return (
+            <div
+              key={index}
+              className="item-box"
+              onClick={() => dispatch(setItems(item))}
+            >
+              {box(item)}
+            </div>
+          );
         });
       } else if (current.length === 0 && passed2.current) {
         pageContent = (

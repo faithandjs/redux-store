@@ -62,8 +62,11 @@ function Details() {
                   <div className="count">{itemE.rating.count}</div>
                 </div>
               </div>
-              <div className="to-cart">
-                <div className="counter">
+              {/*
+                <div className="counter"></div>
+              <div className="to-cart"> </div> */}
+              <div className="button-box-box">
+                <div className="button-box">
                   <button
                     className="minus"
                     onClick={() => {
@@ -71,24 +74,10 @@ function Details() {
                       dispatch(calculateTotal());
                     }}
                   >
-                    -
+                    &lt;
                   </button>
-                  <span>
-                    {data.expandedItem.item.count
-                      ? data.expandedItem.item.count
-                      : null}
-                  </span>
                   <button
-                    onClick={() => {
-                      dispatch(ADD(index));
-                      dispatch(calculateTotal());
-                    }}
-                  >
-                    +
-                  </button>
-                </div>{" "}
-                <div className="button-box">
-                  <button
+                    className="to-cart"
                     onClick={() => {
                       setTimeout(() => {
                         setDisplay();
@@ -104,7 +93,22 @@ function Details() {
                       check(itemE);
                     }}
                   >
-                    add to cart
+                    add{" "}
+                    <span>
+                      {data.expandedItem.item.count
+                        ? data.expandedItem.item.count
+                        : null}
+                    </span>{" "}
+                    to cart
+                  </button>
+                  <button
+                    className="plus"
+                    onClick={() => {
+                      dispatch(ADD(index));
+                      dispatch(calculateTotal());
+                    }}
+                  >
+                    &gt;
                   </button>
                 </div>
               </div>

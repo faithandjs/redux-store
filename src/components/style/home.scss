@@ -191,7 +191,6 @@ font-family: 'Vollkorn', serif;
       .details-box {
         width: -webkit-fill-available;
         display: grid;
-        //background: $matchColor;
         padding: 20px 15px;
         color: $white;
         position: absolute;
@@ -210,7 +209,6 @@ font-family: 'Vollkorn', serif;
           rgba(0, 0, 0, 0.63)
         );
         font-weight: bold;
-        //     display: grid;
         align-items: end;
         grid-template:
           "."
@@ -231,16 +229,21 @@ font-family: 'Vollkorn', serif;
         }
         .price-star {
           display: none;
-          //display: flex;
           justify-content: space-between;
+          align-items: center;
           margin-top: 20px;
           grid-area: price-star;
           margin-top: 0;
-          .empty-icons,
-          .filled-icons {
-            svg {
-              width: 23px !important;
-              height: 23px !important ;
+          .rating {
+            height: max-content;
+            align-items: center;
+            .empty-icons,
+            .filled-icons {
+              display: flex !important;
+              svg {
+                width: 23px;
+                height: 23px;
+              }
             }
           }
         }
@@ -270,6 +273,9 @@ font-family: 'Vollkorn', serif;
           }
           .price-star {
             display: flex;
+            .rating {
+              display: flex;
+            }
           }
         }
       }
@@ -360,6 +366,13 @@ font-family: 'Vollkorn', serif;
           }
           .price-star {
             display: flex;
+            .rating {
+              //display: flex;
+              .empty-icons,
+              .filled-icons {
+                //  display: flex !important;
+              }
+            }
           }
         }
         &:hover {
@@ -433,11 +446,13 @@ font-family: 'Vollkorn', serif;
             font-weight: 500;
           }
           .price-star {
-            .empty-icons,
-            .filled-icons {
-              svg {
-                width: 19px !important;
-                height: 19px !important ;
+            .rating {
+              .empty-icons,
+              .filled-icons {
+                svg {
+                  width: 18px;
+                  height: 18px;
+                }
               }
             }
           }
